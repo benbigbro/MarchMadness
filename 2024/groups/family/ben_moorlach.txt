@@ -1,0 +1,65 @@
+Ben Moorlach
+1 UConn XX
+16 Stetson
+8 FAU
+9 Northwestern X
+5 San Diego St.
+12 UAB X
+4 Auburn XXXXX
+13 Yale
+6 BYU XX
+11 Duquesne
+3 Illinois X
+14 Morehead St.
+7 Washington St.
+10 Drake X
+2 Iowa St. XXX
+15 South Dakota St.
+1 North Carolina X
+16 Wagner
+8 Mississippi St.
+9 Michigan St. XXX
+5 Saint Mary's
+12 Grand Canyon XX
+4 Alabama X
+13 Charleston
+6 Clemson
+11 New Mexico XX
+3 Baylor X
+14 Colgate
+7 Dayton
+10 Nevada X
+2 Arizona XXXX
+15 Long Beach St.
+1 Houston XXXXXX
+16 Longwood
+8 Nebraska X
+9 Texas A&M
+5 Wisconsin
+12 James Madison X
+4 Duke XX
+13 Vermont
+6 Texas Tech
+11 NC State XX
+3 Kentucky X
+14 Oakland
+7 Florida
+10 Colorado XXX
+2 Marquette X
+15 Western Kentucky
+1 Purdue XXXX
+16 Grambling St.
+8 Utah St.
+9 TCU X
+5 Gonzaga XX
+12 McNeese
+4 Kansas
+13 Samford X
+6 South Carolina
+11 Oregon X
+3 Creighton XXX
+14 Akron
+7 Texas
+10 Colorado St. XX
+2 Tennesse X
+15 St. Peter's
