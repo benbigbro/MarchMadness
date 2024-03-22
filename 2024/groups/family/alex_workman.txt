@@ -1,0 +1,65 @@
+Alex Workman
+1 UConn XXX
+16 Stetson
+8 FAU
+9 Northwestern X
+5 San Diego St.
+12 UAB X
+4 Auburn
+13 Yale XX
+6 BYU XX
+11 Duquesne
+3 Illinois X
+14 Morehead St.
+7 Washington St. XXXX
+10 Drake
+2 Iowa St. X
+15 South Dakota St.
+1 North Carolina X
+16 Wagner
+8 Mississippi St.
+9 Michigan St. XXXXX
+5 Saint Mary's
+12 Grand Canyon X
+4 Alabama XX
+13 Charleston
+6 Clemson
+11 New Mexico X
+3 Baylor XXX
+14 Colgate
+7 Dayton
+10 Nevada X
+2 Arizona XX
+15 Long Beach St.
+1 Houston XX
+16 Longwood
+8 Nebraska
+9 Texas A&M X
+5 Wisconsin X
+12 James Madison
+4 Duke XXXX
+13 Vermont
+6 Texas Tech
+11 NC State XX
+3 Kentucky X
+14 Oakland
+7 Florida XXX
+10 Colorado
+2 Marquette X
+15 Western Kentucky
+1 Purdue XX
+16 Grambling St.
+8 Utah St.
+9 TCU X
+5 Gonzaga XXXXXX
+12 McNeese
+4 Kansas X
+13 Samford
+6 South Carolina
+11 Oregon XX
+3 Creighton
+14 Akron X
+7 Texas X
+10 Colorado St.
+2 Tennesse XXX
+15 St. Peter's
