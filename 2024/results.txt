@@ -1,12 +1,12 @@
 Results
-1 UConn
+1 UConn X
 16 Stetson
 8 FAU
-9 Northwestern
-5 San Diego St.
+9 Northwestern X
+5 San Diego St. X
 12 UAB
 4 Auburn
-13 Yale
+13 Yale X
 6 BYU
 11 Duquesne X
 3 Illinois X
@@ -23,9 +23,9 @@ Results
 12 Grand Canyon
 4 Alabama
 13 Charleston
-6 Clemson
+6 Clemson X
 11 New Mexico
-3 Baylor
+3 Baylor X
 14 Colgate
 7 Dayton X
 10 Nevada
@@ -44,8 +44,8 @@ Results
 3 Kentucky
 14 Oakland X
 7 Florida
-10 Colorado
-2 Marquette
+10 Colorado X
+2 Marquette X
 15 Western Kentucky
 1 Purdue
 16 Grambling St.

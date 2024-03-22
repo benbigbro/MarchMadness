@@ -10,6 +10,7 @@ class Bracket:
   score = 0
   maxScore = 0
   eliminated = False
+  author = ""
 
   def __init__(self, author, lines):
     self.eliminated = False
@@ -20,59 +21,43 @@ class Bracket:
     self.games = []
     self.teams = {}
 
+
+    for index, line in enumerate(self.lines):
+      seed = int(line[0])
+      wins = 0
+      if(line[-1][-1] == 'X'):
+        wins = len(line[-1])
+        del line[-1]
+      del line[0]
+      teamName = ' '.join(line)     
+
+      ids = [index//2, index//4, index//8, index//16, index//32, index//64]
+      team = Team(teamName, seed, wins)
+      team.gameIds = ids
+      self.teams[teamName] = team
+
     for i in range(len(self.gameCounts)):
       self.games.append([])
       numberOfGames = self.gameCounts[i]
+
+      round = i + 1
       for gameNumber in range(numberOfGames):
-
-        line1 = lines[gameNumber*2]
-        line2 = lines[gameNumber*2 + 1] 
-
-        if(i == 0):
-          #initialize the teams dictionary
-          seed1 = int(line1[0])
-          seed2 = int(line2[0])
-          wins1 = 0
-          wins2 = 0
-          del line1[0]
-          del line2[0]
-          
-
-          if("X" == line1[-1][-1]):
-              wins1 = len(line1[-1])
-              del line1[-1]
-              
-          if("X" == line2[-1][-1]):
-              wins2 = len(line2[-1])
-              del line2[-1]
-
-          lines[gameNumber*2] = line1
-          lines[gameNumber*2 + 1] = line2
-          team1Name = ' '.join(map(str,line1))
-          team2Name = ' '.join(map(str,line2))
-          team1 = Team(team1Name, seed1, wins1)
-          team2 = Team(team2Name, seed2, wins2)
-
-
-          self.teams[team1Name] = team1
-          self.teams[team2Name] = team2
-
-
-        winners = []
-        losers = []
-        if(i != 0):
-          #get the winners from the previous round
-          for game in self.games[i-1]:
-            winners.append(game.winner)
-            losers.append(game.loser)
-
-          for loser in losers:
-            if(loser != None):
-              loser.lost = True
-              self.teams[loser.team] = loser
-
-          team1 = winners[gameNumber*2]
-          team2 = winners[gameNumber*2 + 1]
-              
-        game = Game(team1, team2)
+        #get the possible teams for this game
+        teams = []
+        game = Game(None)
+        hasWinner = False
+        for line in self.lines:
+          teamName = " ".join(line)
+          team = self.teams[teamName]
+          if team.gameIds[i] == gameNumber:
+            teams.append(team)
+            if team.wins >= round:
+              game.winner = team
+              hasWinner = True
+        if(hasWinner):
+          for team in teams:
+            if(team.team != game.winner.team):
+              if(not self.teams[team.team].lost):
+                self.teams[team.team].lost = True
+                self.teams[team.team].roundLost = round
         self.games[i].append(game)
