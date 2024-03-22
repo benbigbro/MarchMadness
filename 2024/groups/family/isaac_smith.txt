@@ -1,0 +1,65 @@
+Isaac Smith
+1 UConn XXXX
+16 Stetson
+8 FAU
+9 Northwestern X
+5 San Diego St. X
+12 UAB
+4 Auburn XX
+13 Yale
+6 BYU X
+11 Duquesne
+3 Illinois XXX
+14 Morehead St.
+7 Washington St.
+10 Drake X
+2 Iowa St. XX
+15 South Dakota St.
+1 North Carolina XXXXXX
+16 Wagner
+8 Mississippi St.
+9 Michigan St. X
+5 Saint Mary's XX
+12 Grand Canyon
+4 Alabama X
+13 Charleston
+6 Clemson
+11 New Mexico X
+3 Baylor XXX
+14 Colgate
+7 Dayton X
+10 Nevada
+2 Arizona XX
+15 Long Beach St.
+1 Houston XXX
+16 Longwood
+8 Nebraska
+9 Texas A&M X
+5 Wisconsin
+12 James Madison X
+4 Duke XX
+13 Vermont
+6 Texas Tech X
+11 NC State
+3 Kentucky XX
+14 Oakland
+7 Florida X
+10 Colorado
+2 Marquette XXXXX
+15 Western Kentucky
+1 Purdue XXX
+16 Grambling St.
+8 Utah St.
+9 TCU X
+5 Gonzaga XX
+12 McNeese
+4 Kansas X
+13 Samford
+6 South Carolina
+11 Oregon X
+3 Creighton XXXX
+14 Akron
+7 Texas X
+10 Colorado St.
+2 Tennesse XX
+15 St. Peter's

@@ -1,0 +1,65 @@
+NANA
+1 UConn XXX
+16 Stetson
+8 FAU X
+9 Northwestern
+5 San Diego St. XX
+12 UAB
+4 Auburn X
+13 Yale
+6 BYU X
+11 Duquesne
+3 Illinois XXXX
+14 Morehead St.
+7 Washington St. X
+10 Drake
+2 Iowa St. XX
+15 South Dakota St.
+1 North Carolina XX
+16 Wagner
+8 Mississippi St. X
+9 Michigan St.
+5 Saint Mary's X
+12 Grand Canyon
+4 Alabama XXX
+13 Charleston
+6 Clemson
+11 New Mexico XX
+3 Baylor X
+14 Colgate
+7 Dayton X
+10 Nevada
+2 Arizona XXXXXX
+15 Long Beach St.
+1 Houston XXXXX
+16 Longwood
+8 Nebraska
+9 Texas A&M X
+5 Wisconsin
+12 James Madison X
+4 Duke XX
+13 Vermont
+6 Texas Tech X
+11 NC State
+3 Kentucky XXX
+14 Oakland
+7 Florida
+10 Colorado X
+2 Marquette XX
+15 Western Kentucky
+1 Purdue XXXX
+16 Grambling St.
+8 Utah St. X
+9 TCU
+5 Gonzaga XX
+12 McNeese
+4 Kansas
+13 Samford X
+6 South Carolina X
+11 Oregon
+3 Creighton XXX
+14 Akron
+7 Texas X
+10 Colorado St.
+2 Tennesse XX
+15 St. Peter's

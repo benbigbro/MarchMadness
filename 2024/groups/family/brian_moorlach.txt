@@ -1,0 +1,65 @@
+Brian Moorlach
+1 UConn XXXXXX
+16 Stetson
+8 FAU X
+9 Northwestern
+5 San Diego St. XX
+12 UAB
+4 Auburn X
+13 Yale
+6 BYU XX
+11 Duquesne
+3 Illinois X
+14 Morehead St.
+7 Washington St. X
+10 Drake
+2 Iowa St. XXX
+15 South Dakota St.
+1 North Carolina XXXX
+16 Wagner
+8 Mississippi St.
+9 Michigan St. X
+5 Saint Mary's XX
+12 Grand Canyon
+4 Alabama X
+13 Charleston
+6 Clemson X
+11 New Mexico
+3 Baylor XX
+14 Colgate
+7 Dayton X
+10 Nevada
+2 Arizona XXX
+15 Long Beach St.
+1 Houston XXXXX
+16 Longwood
+8 Nebraska
+9 Texas A&M X
+5 Wisconsin X
+12 James Madison
+4 Duke XX
+13 Vermont
+6 Texas Tech XX
+11 NC State
+3 Kentucky X
+14 Oakland
+7 Florida X
+10 Colorado
+2 Marquette XXX
+15 Western Kentucky
+1 Purdue XXX
+16 Grambling St.
+8 Utah St. X
+9 TCU
+5 Gonzaga XX
+12 McNeese
+4 Kansas
+13 Samford X
+6 South Carolina X
+11 Oregon
+3 Creighton XXXX
+14 Akron
+7 Texas XX
+10 Colorado St.
+2 Tennesse X
+15 St. Peter's

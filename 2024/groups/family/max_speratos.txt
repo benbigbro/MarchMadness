@@ -1,0 +1,65 @@
+Max Speratos
+1 UConn XXXXXX
+16 Stetson
+8 FAU
+9 Northwestern X
+5 San Diego St. XX
+12 UAB
+4 Auburn X
+13 Yale
+6 BYU
+11 Duquesne X
+3 Illinois XX
+14 Morehead St.
+7 Washington St.
+10 Drake X
+2 Iowa St. XXX
+15 South Dakota St.
+1 North Carolina XX
+16 Wagner
+8 Mississippi St. X
+9 Michigan St.
+5 Saint Mary's X
+12 Grand Canyon
+4 Alabama XXX
+13 Charleston
+6 Clemson
+11 New Mexico X
+3 Baylor XX
+14 Colgate
+7 Dayton
+10 Nevada X
+2 Arizona XXXX
+15 Long Beach St.
+1 Houston XXXXX
+16 Longwood
+8 Nebraska
+9 Texas A&M X
+5 Wisconsin XX
+12 James Madison
+4 Duke X
+13 Vermont
+6 Texas Tech
+11 NC State X
+3 Kentucky XX
+14 Oakland
+7 Florida X
+10 Colorado
+2 Marquette XXX
+15 Western Kentucky
+1 Purdue XX
+16 Grambling St.
+8 Utah St. X
+9 TCU
+5 Gonzaga X
+12 McNeese
+4 Kansas XXX
+13 Samford
+6 South Carolina
+11 Oregon X
+3 Creighton XXXX
+14 Akron
+7 Texas X
+10 Colorado St.
+2 Tennesse XX
+15 St. Peter's

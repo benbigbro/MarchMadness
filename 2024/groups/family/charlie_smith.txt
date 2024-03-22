@@ -1,0 +1,65 @@
+Charlie Smith
+1 UConn XX
+16 Stetson
+8 FAU
+9 Northwestern X
+5 San Diego St. X
+12 UAB
+4 Auburn XXX
+13 Yale
+6 BYU XX
+11 Duquesne
+3 Illinois X
+14 Morehead St.
+7 Washington St. X
+10 Drake
+2 Iowa St. XXXX
+15 South Dakota St.
+1 North Carolina XXX
+16 Wagner
+8 Mississippi St. X
+9 Michigan St.
+5 Saint Mary's X
+12 Grand Canyon
+4 Alabama XX
+13 Charleston
+6 Clemson X
+11 New Mexico
+3 Baylor XX
+14 Colgate
+7 Dayton
+10 Nevada X
+2 Arizona XXXXXX
+15 Long Beach St.
+1 Houston XXXXX
+16 Longwood
+8 Nebraska
+9 Texas A&M X
+5 Wisconsin
+12 James Madison X
+4 Duke XX
+13 Vermont
+6 Texas Tech
+11 NC State X
+3 Kentucky XXX
+14 Oakland
+7 Florida
+10 Colorado X
+2 Marquette XX
+15 Western Kentucky
+1 Purdue XX
+16 Grambling St.
+8 Utah St. X
+9 TCU
+5 Gonzaga
+12 McNeese X
+4 Kansas XXX
+13 Samford
+6 South Carolina
+11 Oregon X
+3 Creighton XX
+14 Akron
+7 Texas X
+10 Colorado St.
+2 Tennesse XXXX
+15 St. Peter's

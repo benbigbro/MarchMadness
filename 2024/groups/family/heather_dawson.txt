@@ -1,0 +1,65 @@
+Heather Dawson
+1 UConn XXXX
+16 Stetson
+8 FAU X
+9 Northwestern
+5 San Diego St. X
+12 UAB
+4 Auburn XX
+13 Yale
+6 BYU X
+11 Duquesne
+3 Illinois XX
+14 Morehead St.
+7 Washington St.
+10 Drake XXX
+2 Iowa St. X
+15 South Dakota St.
+1 North Carolina XXX
+16 Wagner
+8 Mississippi St. X
+9 Michigan St.
+5 Saint Mary's
+12 Grand Canyon XX
+4 Alabama X
+13 Charleston
+6 Clemson XX
+11 New Mexico
+3 Baylor X
+14 Colgate
+7 Dayton
+10 Nevada X
+2 Arizona XXXXXX
+15 Long Beach St.
+1 Houston XXXXX
+16 Longwood
+8 Nebraska
+9 Texas A&M X
+5 Wisconsin XX
+12 James Madison
+4 Duke X
+13 Vermont
+6 Texas Tech X
+11 NC State
+3 Kentucky XX
+14 Oakland
+7 Florida
+10 Colorado X
+2 Marquette XXX
+15 Western Kentucky
+1 Purdue XXXX
+16 Grambling St.
+8 Utah St.
+9 TCU X
+5 Gonzaga
+12 McNeese X
+4 Kansas XX
+13 Samford
+6 South Carolina
+11 Oregon XX
+3 Creighton
+14 Akron X
+7 Texas XXX
+10 Colorado St.
+2 Tennesse X
+15 St. Peter's
