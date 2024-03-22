@@ -1,65 +1,65 @@
 Torrey Ferguson
-1 UConn
+1 UConn XXXXXX
 16 Stetson
-8 FAU
+8 FAU X
 9 Northwestern
-5 San Diego St.
+5 San Diego St. X
 12 UAB
-4 Auburn
+4 Auburn XX
 13 Yale
-6 BYU
-11 Duquesne X
-3 Illinois X
+6 BYU X
+11 Duquesne
+3 Illinois XX
 14 Morehead St.
-7 Washington St.
+7 Washington St. X
 10 Drake
-2 Iowa St.
+2 Iowa St. XXX
 15 South Dakota St.
-1 North Carolina X
+1 North Carolina XXX
 16 Wagner
 8 Mississippi St.
 9 Michigan St. X
-5 Saint Mary's
+5 Saint Mary's X
 12 Grand Canyon
-4 Alabama
+4 Alabama XX
 13 Charleston
-6 Clemson
+6 Clemson X
 11 New Mexico
-3 Baylor
+3 Baylor XXXX
 14 Colgate
-7 Dayton
+7 Dayton X
 10 Nevada
-2 Arizona X
+2 Arizona XX
 15 Long Beach St.
-1 Houston
+1 Houston XXX
 16 Longwood
-8 Nebraska
+8 Nebraska X
 9 Texas A&M
-5 Wisconsin
+5 Wisconsin X
 12 James Madison
-4 Duke
+4 Duke XX
 13 Vermont
-6 Texas Tech
+6 Texas Tech X
 11 NC State
-3 Kentucky
+3 Kentucky XX
 14 Oakland
-7 Florida
+7 Florida X
 10 Colorado
-2 Marquette
+2 Marquette XXXXX
 15 Western Kentucky
-1 Purdue
+1 Purdue XXXX
 16 Grambling St.
 8 Utah St.
-9 TCU
-5 Gonzaga
+9 TCU X
+5 Gonzaga X
 12 McNeese
-4 Kansas
+4 Kansas XX
 13 Samford
-6 South Carolina
+6 South Carolina X
 11 Oregon
-3 Creighton X
+3 Creighton XX
 14 Akron
-7 Texas
+7 Texas X
 10 Colorado St.
-2 Tennesse
+2 Tennesse XXX
 15 St. Peter's

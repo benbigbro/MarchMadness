@@ -1,65 +1,65 @@
 Hilary Moorlach
-1 UConn
+1 UConn XXXX
 16 Stetson
 8 FAU
-9 Northwestern
+9 Northwestern X
 5 San Diego St.
-12 UAB
-4 Auburn
+12 UAB X
+4 Auburn XX
 13 Yale
-6 BYU
-11 Duquesne X
+6 BYU XX
+11 Duquesne
 3 Illinois X
 14 Morehead St.
-7 Washington St.
+7 Washington St. X
 10 Drake
-2 Iowa St.
+2 Iowa St. XXX
 15 South Dakota St.
-1 North Carolina X
+1 North Carolina XXXXXX
 16 Wagner
 8 Mississippi St.
 9 Michigan St. X
 5 Saint Mary's
-12 Grand Canyon
-4 Alabama
+12 Grand Canyon X
+4 Alabama XX
 13 Charleston
 6 Clemson
-11 New Mexico
-3 Baylor
+11 New Mexico X
+3 Baylor XXX
 14 Colgate
-7 Dayton
+7 Dayton XX
 10 Nevada
 2 Arizona X
 15 Long Beach St.
-1 Houston
+1 Houston XXX
 16 Longwood
-8 Nebraska
+8 Nebraska X
 9 Texas A&M
-5 Wisconsin
+5 Wisconsin X
 12 James Madison
-4 Duke
+4 Duke XX
 13 Vermont
 6 Texas Tech
-11 NC State
-3 Kentucky
+11 NC State XX
+3 Kentucky X
 14 Oakland
 7 Florida
-10 Colorado
-2 Marquette
+10 Colorado X
+2 Marquette XXXXX
 15 Western Kentucky
-1 Purdue
+1 Purdue XXXX
 16 Grambling St.
-8 Utah St.
+8 Utah St. X
 9 TCU
-5 Gonzaga
+5 Gonzaga X
 12 McNeese
-4 Kansas
+4 Kansas XX
 13 Samford
 6 South Carolina
-11 Oregon
+11 Oregon XX
 3 Creighton X
 14 Akron
-7 Texas
+7 Texas X
 10 Colorado St.
-2 Tennesse
+2 Tennesse XXX
 15 St. Peter's

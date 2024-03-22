@@ -1,65 +1,65 @@
 Leah Dawson
-1 UConn
+1 UConn XXXX
 16 Stetson
 8 FAU
-9 Northwestern
-5 San Diego St.
+9 Northwestern X
+5 San Diego St. XX
 12 UAB
 4 Auburn
-13 Yale
-6 BYU
-11 Duquesne X
+13 Yale X
+6 BYU XXX
+11 Duquesne
 3 Illinois X
 14 Morehead St.
-7 Washington St.
+7 Washington St. X
 10 Drake
-2 Iowa St.
+2 Iowa St. XX
 15 South Dakota St.
-1 North Carolina X
+1 North Carolina XX
 16 Wagner
 8 Mississippi St.
 9 Michigan St. X
 5 Saint Mary's
-12 Grand Canyon
-4 Alabama
+12 Grand Canyon X
+4 Alabama XXXXX
 13 Charleston
 6 Clemson
-11 New Mexico
-3 Baylor
+11 New Mexico XX
+3 Baylor X
 14 Colgate
-7 Dayton
+7 Dayton X
 10 Nevada
-2 Arizona X
+2 Arizona XXX
 15 Long Beach St.
-1 Houston
+1 Houston X
 16 Longwood
 8 Nebraska
-9 Texas A&M
-5 Wisconsin
+9 Texas A&M XXXX
+5 Wisconsin X
 12 James Madison
-4 Duke
+4 Duke XX
 13 Vermont
 6 Texas Tech
-11 NC State
-3 Kentucky
+11 NC State X
+3 Kentucky XXX
 14 Oakland
-7 Florida
+7 Florida XX
 10 Colorado
-2 Marquette
+2 Marquette X
 15 Western Kentucky
-1 Purdue
+1 Purdue XX
 16 Grambling St.
 8 Utah St.
-9 TCU
-5 Gonzaga
+9 TCU X
+5 Gonzaga XXXXXX
 12 McNeese
-4 Kansas
+4 Kansas X
 13 Samford
 6 South Carolina
-11 Oregon
+11 Oregon XX
 3 Creighton X
 14 Akron
 7 Texas
-10 Colorado St.
-2 Tennesse
+10 Colorado St. X
+2 Tennesse XXX
 15 St. Peter's

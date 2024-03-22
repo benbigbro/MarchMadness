@@ -3,6 +3,9 @@ import os
 
 from Bracket import Bracket
 
+def sort_key(obj):
+    return (obj.score, obj.maxScore)
+
 def generateBracket(name) -> Bracket:
     if name == 'result':
         bracket = Bracket(name)
@@ -145,6 +148,8 @@ for file in predictionBracketFiles:
     predictionBrackets.append(bracket)
 
     alive.append(" ".join(lines[0]))
+
+predictionBrackets.sort(key=sort_key, reverse=True)
 
 for i in range(len(predictionBrackets)):
     #determine the bracket which will be the best case scenario for this participant

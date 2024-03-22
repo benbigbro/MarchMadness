@@ -9,8 +9,8 @@ Alex Workman
 13 Yale XX
 6 BYU XX
 11 Duquesne
-3 Illinois X
-14 Morehead St.
+3 Illinois
+14 Morehead St. X
 7 Washington St. XXXX
 10 Drake
 2 Iowa St. X
