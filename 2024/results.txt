@@ -3,63 +3,63 @@ Results
 16 Stetson
 8 FAU
 9 Northwestern X
-5 San Diego St. X
+5 San Diego St. XX
 12 UAB
 4 Auburn
 13 Yale X
 6 BYU
 11 Duquesne X
-3 Illinois X
+3 Illinois XX
 14 Morehead St.
 7 Washington St. X
 10 Drake
-2 Iowa St. X
+2 Iowa St. XX
 15 South Dakota St.
-1 North Carolina X
+1 North Carolina XX
 16 Wagner
 8 Mississippi St.
 9 Michigan St. X
 5 Saint Mary's
-12 Grand Canyon
-4 Alabama
+12 Grand Canyon X
+4 Alabama XX
 13 Charleston
-6 Clemson X
+6 Clemson XX
 11 New Mexico
 3 Baylor X
 14 Colgate
 7 Dayton X
 10 Nevada
-2 Arizona X
+2 Arizona XX
 15 Long Beach St.
-1 Houston
+1 Houston XX
 16 Longwood
 8 Nebraska
-9 Texas A&M
+9 Texas A&M X
 5 Wisconsin
-12 James Madison
-4 Duke
+12 James Madison X
+4 Duke XX
 13 Vermont
 6 Texas Tech
-11 NC State X
+11 NC State XX
 3 Kentucky
 14 Oakland X
 7 Florida
 10 Colorado X
-2 Marquette X
+2 Marquette XX
 15 Western Kentucky
-1 Purdue
+1 Purdue XX
 16 Grambling St.
-8 Utah St.
+8 Utah St. X
 9 TCU
-5 Gonzaga X
+5 Gonzaga XX
 12 McNeese
 4 Kansas X
 13 Samford
 6 South Carolina
 11 Oregon X
-3 Creighton X
+3 Creighton XX
 14 Akron
 7 Texas X
 10 Colorado St.
-2 Tennesse X
+2 Tennesse XX
 15 St. Peter's
