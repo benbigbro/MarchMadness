@@ -1,10 +1,16 @@
 import sys
+import os
 print()
 
-if len(sys.argv) != 3:
+if len(sys.argv) < 3:
     print("Please enter the year as second command line argument")
     print("Please enter the type of bracket creation: \"perfect\" or \"all\" as the third command line argument")
     exit(-1)
+
+if(sys.argv[2] == "all" and len(sys.argv) < 4):
+    print("Please enter the group as fourth command line argument")
+    exit(-1)
+
 
 year = sys.argv[1]
 
@@ -26,13 +32,6 @@ with open(t_file_path) as f:
 teams = [name.replace("\n","") for name in teams]
 
 participants = []
-
-p_file_path = year + "/participants.txt"
-
-with open(p_file_path) as f:
-    participants = f.readlines()
-
-participants = [name.replace("\n","") for name in participants]
 
 teams32 = []
 teams16 = []
@@ -131,14 +130,60 @@ if(perfect):
     print("\n\n\nend of championship\n\n\n")
     file.write(winner[0]+"\n")
     file.close()
-else:
-    for participant in participants:
-        filename = year + "/participants/" + participant + ".txt"
-        print(filename)
-        test = input("continue?\n")
-        if test == "n":
-            continue
-        file = open(filename, "w")
+    exit
+
+
+group = sys.argv[3]
+baseDir = f"{year}/groups/{group}"
+p_file_path = f"{baseDir}/participants.txt"
+
+with open(p_file_path) as f:
+    participants = f.readlines()
+
+participants = [name.replace("\n","") for name in participants]
+for participant in participants:
+    filename = f"{baseDir}/{participant}.txt"
+    print(filename)
+    test = input("continue?\n")
+    if test == "n":
+        continue
+
+    
+    with open(filename, "w") as file:
+
+        for i in range(len(teams)):
+            file.write(teams[i]+"\n")
+            if(i%2 == 1):
+                continue
+
+            temp = int(input(f"\n{teams[i]} or {teams[i+1]}?\n")) - 1
+
+
+
+            numberOfWins = 0
+            while(numberOfWins < 1 or numberOfWins > 6):
+                numberOfWins = int(input(f"How many games does {teams[i+temp]} win (1-6)?\n"))
+            
+            if(numberOfWins > 0):
+                teams32.append(teams[i+temp])
+            if(numberOfWins > 1):
+                teams16.append(teams[i+temp])
+            if(numberOfWins > 2):
+                teams8.append(teams[i+temp])
+            if(numberOfWins > 3):
+                teams4.append(teams[i+temp])
+            if(numberOfWins > 4):
+                teams2.append(teams[i+temp])
+            if(numberOfWins > 5):
+                winner.append(teams[i+temp])
+                
+
+
+        #add Xs
+
+
+
+
         for i in range(len(teams)):
             file.write(teams[i]+"\n")
             if i%2 == 1:
@@ -223,4 +268,3 @@ else:
 
         print("\n\n\nend of championship\n\n\n")
         file.write(winner[0]+"\n")
-        file.close()
