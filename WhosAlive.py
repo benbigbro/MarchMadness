@@ -1,6 +1,7 @@
 import copy
 import sys
 import os
+from tqdm import tqdm
 
 from Bracket import Bracket
 
@@ -66,6 +67,43 @@ def generateBestCaseScenarioLines(resultBracket, participantBracket):
             del lines[index][-1]
     return lines
 
+def generateHypotheticalLines(resultBracket: Bracket, seedString):
+    lines = []
+    hypotheticalBracketLines = resultBracket.generateLines()
+    hypotheticalBracket:Bracket = Bracket(f"seed {seedString}", hypotheticalBracketLines)
+
+    hypotheticalBracket.fillRemainingGames(seedString)
+    return hypotheticalBracket.generateLines()
+
+def determineNumberOfWinningScenarios(resultBracket):
+    count = 2**resultBracket.gamesRemaining
+    for seed in tqdm(range(count), total=count, unit="item"):
+        
+        seedString = format(seed,'b').zfill(resultBracket.gamesRemaining)
+        hypotheticalLines = generateHypotheticalLines(resultBracket, seedString)
+        hypotheticalBracket = Bracket(f"seed {seedString}", hypotheticalLines)
+        bestIndex = []
+        bestScore = 0
+        for bracketIndex, bracket in enumerate(predictionBrackets):
+            score = 0
+            for index, (resultRound, participantRound, roundBonus) in enumerate(zip(hypotheticalBracket.games, bracket.games, roundBonuses)):
+                for resultGame, participantGame in zip(resultRound, participantRound):
+                    if(resultGame.winner != None):
+                        #the result has a winner, we can calculate if the participant gets points or not
+                        if(resultGame.winner.team == participantGame.winner.team):
+                            score += resultGame.winner.seed + roundBonus
+
+            if score == bestScore:
+                bestIndex.append(bracketIndex)
+            if score > bestScore:
+                bestScore = score
+                bestIndex = [bracketIndex]
+        for index in bestIndex:
+            predictionBrackets[index].winningScenarios += 1
+
+
+
+
 
         
 
@@ -109,6 +147,8 @@ predictionBrackets = []
 resultPath = f"{os.getcwd()}\\{year}\\results.txt"
 lines = generateLines(resultPath)
 resultBracket = Bracket("Result", lines[1:] )
+
+
 alive = []
 dead = []
 
@@ -145,7 +185,7 @@ for file in predictionBracketFiles:
     alive.append(" ".join(lines[0]))
 
 predictionBrackets.sort(key=sort_key, reverse=True)
-
+determineNumberOfWinningScenarios(resultBracket)
 for i in range(len(predictionBrackets)):
     #determine the bracket which will be the best case scenario for this participant
     participant = predictionBrackets[i].author
@@ -187,25 +227,25 @@ print()
 print()
 
 
-print("Still alive                        Score                  Max Score")
-print("---------------------------------------------------------------------------")
+print("Still alive                        Score                  Max Score                   Winning Percentage")
+print("-----------------------------------------------------------------------------------------------------------")
 for prediction in predictionBrackets:
     if(not prediction.eliminated):
         author = prediction.author
         if len(author) < 20:
             for i in range(20-len(author)):
                 author += " "
-        print(f"{author}                  {prediction.score}                   {prediction.maxScore}")
+        print(f"{author}                  {prediction.score}                   {prediction.maxScore}                        {"{:.2f}".format(prediction.winningScenarios*100/(2**resultBracket.gamesRemaining))} %")
 
 
 print()
 print()
-print("Eliminated                         Score                  Max Score")
-print("----------------------------------------------------------------------------")
+print("Eliminated                         Score                  Max Score                   Winning Percentage")
+print("------------------------------------------------------------------------------------------------------------")
 for prediction in predictionBrackets:
     if(prediction.eliminated):
         author = prediction.author
         if(len(author) < 20):
             for i in range(20-len(author)):
                 author += " "
-        print(f"{author}                  {prediction.score}                    {prediction.maxScore}")
+        print(f"{author}                  {prediction.score}                   {prediction.maxScore}                        {"{:.2f}".format(prediction.winningScenarios*100/(2**resultBracket.gamesRemaining))} %")

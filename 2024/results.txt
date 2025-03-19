@@ -1,5 +1,5 @@
 Results
-1 UConn X
+1 UConn XXXXX
 16 Stetson
 8 FAU
 9 Northwestern X
@@ -9,7 +9,7 @@ Results
 13 Yale X
 6 BYU
 11 Duquesne X
-3 Illinois XX
+3 Illinois XXX
 14 Morehead St.
 7 Washington St. X
 10 Drake
@@ -21,9 +21,9 @@ Results
 9 Michigan St. X
 5 Saint Mary's
 12 Grand Canyon X
-4 Alabama XX
+4 Alabama XXXX
 13 Charleston
-6 Clemson XX
+6 Clemson XXX
 11 New Mexico
 3 Baylor X
 14 Colgate
@@ -37,17 +37,17 @@ Results
 9 Texas A&M X
 5 Wisconsin
 12 James Madison X
-4 Duke XX
+4 Duke XXX
 13 Vermont
 6 Texas Tech
-11 NC State XX
+11 NC State XXX
 3 Kentucky
 14 Oakland X
 7 Florida
 10 Colorado X
 2 Marquette XX
 15 Western Kentucky
-1 Purdue XX
+1 Purdue XXXXX
 16 Grambling St.
 8 Utah St. X
 9 TCU
@@ -61,5 +61,5 @@ Results
 14 Akron
 7 Texas X
 10 Colorado St.
-2 Tennesse XX
+2 Tennesse XXX
 15 St. Peter's
