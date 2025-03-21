@@ -1,0 +1,64 @@
+1 Auburn XXXXXX
+16 Alabama St
+8 Louisville
+9 Creighton X
+5 Michigan
+12 UC SanDiego X
+4 Texas A&M XX
+13 Yale
+6 Ole Miss
+11 North Carolina XX
+3 Iowa St X
+14 Lipscomb
+7 Marquette XXX
+10 New Mexico
+2 Michigan St X
+15 Bryant
+1 Florida XXX
+16 Norfolk St
+8 UConn X
+9 Oklahoma
+5 Memphis XX
+12 Colorado St
+4 Maryland X
+13 Grand Canyon
+6 Missouri
+11 Drake X
+3 Texas Tech XX
+14 UNC Wilmington
+7 Kansas XXXX
+10 Arkansas
+2 St Johns X
+15 Omaha
+1 Duke XX
+16 American
+8 Mississippi St
+9 Baylor X
+5 Oregon X
+12 Liberty
+4 Arizona XXX
+13 Akron
+6 BYU X
+11 VCU
+3 Wisconsin XX
+14 Montana
+7 Saint Marys
+10 Vanderbilt X
+2 Alabama XXXX
+15 Robert Morris
+1 Houston XXXXX
+16 SIUE
+8 Gonzaga X
+9 Georgia
+5 Clemson X
+12 McNeese
+4 Purdue XX
+13 High Point
+6 Illinois X
+11 Xavier 
+3 Kentucky XXX
+14 Troy
+7 UCLA XX
+10 Utah St
+2 Tennessee X
+15 Wofford

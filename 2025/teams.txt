@@ -1,64 +1,64 @@
-Auburn 1
-AlabamaSt 16
-Louisville 8
-Creighton 9
-Michigan 5
-UC_SanDiego 12
-TexasAM 4
-Yale 13
-OleMiss 6
-NorthCarolina 11
-IowaSt 3
-Lipscomb 14
-Marquette 7
-NewMexico 10
-MichiganSt 2
-Bryant 15
-Florida 1
-NorfolkSt 16
-UConn 8
-Oklahoma 9
-Memphis 5
-ColoradoSt 12
-Maryland 4
-GrandCanyon 13
-Missouri 6
-Drake 11
-TexasTech 3
-UNC_Wilmington 14
-Kansas 7
-Arkansas 10
-StJohns 2
-Omaha 15
-Duke 1
-AMER_MSM 16
-MississippiSt 8
-Baylor 9
-Oregon 5
-Liberty 12
-Arizona 4
-Akron 13
-BYU 6
-VCU 11
-Wisconsin 3
-Montana 14
-SaintMarys 7
-Vanderbilt 10
-Alabama 2
-RobertMorris 15
-Houston 1
-SIUE 16
-Gonzaga 8
-Georgia 9
-Clemson 5
-McNeese 12
-Purdue 4
-HighPoint 13
-Illinois 6
-TEX_ZAV 11
-Kentucky 3
-Troy 14
-UCLA 7
-UtahSt 10
-Tennessee 2
-Wofford 15
+1 Auburn
+16 Alabama St
+8 Louisville
+9 Creighton
+5 Michigan
+12 UC SanDiego
+4 Texas A&M
+13 Yale
+6 Ole Miss
+11 North Carolina
+3 Iowa St
+14 Lipscomb
+7 Marquette
+10 New Mexico
+2 Michigan St
+15 Bryant
+1 Florida
+16 Norfolk St
+8 UConn
+9 Oklahoma
+5 Memphis
+12 Colorado St
+4 Maryland
+13 Grand Canyon
+6 Missouri
+11 Drake
+3 Texas Tech
+14 UNC Wilmington
+7 Kansas
+10 Arkansas
+2 St Johns
+15 Omaha
+1 Duke
+16 American
+8 Mississippi St
+9 Baylor
+5 Oregon
+12 Liberty
+4 Arizona
+13 Akron
+6 BYU
+11 VCU
+3 Wisconsin
+14 Montana
+7 Saint Marys
+10 Vanderbilt
+2 Alabama
+15 Robert Morris
+1 Houston
+16 SIUE
+8 Gonzaga
+9 Georgia
+5 Clemson
+12 McNeese
+4 Purdue
+13 High Point
+6 Illinois
+11 Xavier 
+3 Kentucky
+14 Troy
+7 UCLA
+10 Utah St
+2 Tennessee
+15 Wofford
