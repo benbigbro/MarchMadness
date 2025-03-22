@@ -13,7 +13,7 @@
       "request": "launch",
       "program": "${file}",
       "console": "integratedTerminal",
-      "args": ["2025", "all","family"]
+      "args": ["2025","family"]
     }
   ]
 }

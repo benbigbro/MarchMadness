@@ -3,68 +3,16 @@ import sys
 import os
 from tqdm import tqdm
 
-from Bracket import Bracket
+from Bracket import Bracket, UserBracket, HypotheticalBracket
 
 def sort_key(obj):
-    return (obj.score, obj.maxScore)
+    return (obj.score, obj.max_score)
 
-def generateBracket(name) -> Bracket:
-    if name == 'result':
-        bracket = Bracket(name)
-        return bracket
-    
 def generateLines(filePath):
-    contents = open(filePath, "r").read()
-    lines = contents.split("\n")
-    author = lines[0]
-    for i in range(len(lines)):
-      lines[i] = lines[i].split(" ")
-    return lines
+    with open(filePath, "r") as file:
+        lines = file.readlines()
 
-def lostTeams(resultBracket):
-    #returns the teams which have been elimated
-    retVal = []
-    for team in resultBracket.teams:
-        if resultBracket.teams[team].lost:
-            retVal.append(team)
-    return retVal
-
-def generateBestCaseScenarioLines(resultBracket, participantBracket):
-    #each line is a team in the tournament
-    #space delimited
-    #first is seed
-    #then team name
-    #then 'X's indicating the number of wins
-    # lines = resultBracket.lines
-
-    #start from the result bracket
-    lines = []
-    for line in resultBracket.lines:
-        resultX = ""
-        resultTeam = resultBracket.teams[" ".join(line)]
-        participantTeam = participantBracket.teams[" ".join(line)]
-        for i in range(resultBracket.teams[" ".join(line)].wins):
-            resultX += "X"
-
-        lines.append([resultBracket.teams[" ".join(line)].seed] + line + [resultX])
-    
-    for round in range(len(roundGames)):
-        winsNeeded = round + 1
-        for index, participantTeam in enumerate(participantBracket.lines):
-            participantTeam = " ".join(participantTeam)
-            gameNumber = resultBracket.teams[participantTeam].gameIds[round]
-            hasWinner = False
-            for lineNumber in range(len(resultBracket.lines)):
-                team = resultBracket.teams[' '.join(resultBracket.lines[lineNumber])]
-                if team.gameIds[round] == gameNumber:
-                    if team.wins >= winsNeeded:
-                        hasWinner = True
-            if (not hasWinner) and (participantBracket.teams[participantTeam].wins >= winsNeeded) and (participantBracket.teams[participantTeam].gameIds[round] == gameNumber) and (participantBracket.teams[participantTeam].roundLost > round or participantBracket.teams[participantTeam].roundLost == 0) and (resultBracket.teams[participantTeam].roundLost > round or resultBracket.teams[participantTeam].roundLost == 0):
-                lines[index][-1] += 'X'
-
-    for index in range(len(lines)):
-        if lines[index][-1] == "":
-            del lines[index][-1]
+    lines = [line.replace("\n","") for line in lines]
     return lines
 
 def generateHypotheticalLines(resultBracket: Bracket, seedString):
@@ -75,37 +23,33 @@ def generateHypotheticalLines(resultBracket: Bracket, seedString):
     hypotheticalBracket.fillRemainingGames(seedString)
     return hypotheticalBracket.generateLines()
 
-def determineNumberOfWinningScenarios(resultBracket):
-    count = 2**resultBracket.gamesRemaining
+def determineNumberOfWinningScenarios(resultBracket:Bracket, prediction_brackets: list[UserBracket], winning_brackets: dict[str, int]):
+    # if(resultBracket.games_remaining > 20):
+    #     return
+    count = 2**resultBracket.games_remaining
+    if(resultBracket.games_remaining > 7):
+        count = 2**7
     for seed in tqdm(range(count), total=count, unit="item"):
+
+        rounds = 1
+        if(resultBracket.games_remaining > 7):
+            rounds = 1
         
-        seedString = format(seed,'b').zfill(resultBracket.gamesRemaining)
-        hypotheticalLines = generateHypotheticalLines(resultBracket, seedString)
-        hypotheticalBracket = Bracket(f"seed {seedString}", hypotheticalLines)
-        bestIndex = []
-        bestScore = 0
-        for bracketIndex, bracket in enumerate(predictionBrackets):
-            score = 0
-            for index, (resultRound, participantRound, roundBonus) in enumerate(zip(hypotheticalBracket.games, bracket.games, roundBonuses)):
-                for resultGame, participantGame in zip(resultRound, participantRound):
-                    if(resultGame.winner != None):
-                        #the result has a winner, we can calculate if the participant gets points or not
-                        if(resultGame.winner.team == participantGame.winner.team):
-                            score += resultGame.winner.seed + roundBonus
+        for i in range(rounds):
+            seedString = format(seed,'b').zfill(count)
+            hypotheticalBracket = HypotheticalBracket(seedString, resultBracket)
 
-            if score == bestScore:
-                bestIndex.append(bracketIndex)
-            if score > bestScore:
-                bestScore = score
-                bestIndex = [bracketIndex]
-        for index in bestIndex:
-            predictionBrackets[index].winningScenarios += 1
+            max_score = 0
+            max_scorer = ""
+            for bracket in prediction_brackets:
+                #treat the hypothetical bracket as truth, and compare it to the prediction bracket
+                test_bracket = UserBracket(bracket.lines, hypotheticalBracket, bracket.author, roundBonuses, scoringSeeds)
+                if(test_bracket.score > max_score):
+                    max_score = test_bracket.score
+                    max_scorer = test_bracket.author
 
+            winning_brackets[max_scorer] += 1
 
-
-
-
-        
 
 #BONUSES
 # firstround = 1
@@ -126,8 +70,6 @@ sixthround = 25
 roundBonuses = [1,5,10,15,20,25]
 roundGames = [32,16,8,4,2,1]
 #CONFIG
-hardloss = True #people who are in the loss column are garunteed to be out
-maxScores = True #spit out the max score to make sure I inputted correct brackets
 scoringSeeds = True
 
 if len(sys.argv) != 3:
@@ -138,88 +80,68 @@ year = sys.argv[1]
 group = sys.argv[2]
 print("\n\n\n")
 
-participantPath = f"{os.getcwd()}\\{year}\\groups\\{group}"
+participantPath = f"{os.getcwd()}/{year}/groups/{group}"
 
 predictionBracketFiles = os.listdir(participantPath)
 
-predictionBrackets = []
+predictionBracketFiles.remove("participants.txt")
+predictionBrackets:list[UserBracket] = []
 
-resultPath = f"{os.getcwd()}\\{year}\\results.txt"
+resultPath = f"{os.getcwd()}/{year}/results.txt"
 lines = generateLines(resultPath)
-resultBracket = Bracket("Result", lines[1:] )
-
+resultBracket = Bracket(lines)
 
 alive = []
 dead = []
 
+eliminated = set()
+winning_brackets : dict[str, int]= {}
+
 for file in predictionBracketFiles:
-    filePath = f"{os.getcwd()}\\{year}\\groups\\{group}\\{file}"
+    filePath = f"{os.getcwd()}/{year}/groups/{group}/{file}"
     lines = generateLines(filePath)
-    bracket = Bracket(" ".join(lines[0]), lines[1:])
-    bestCaseLines = generateBestCaseScenarioLines(resultBracket, bracket)
-    bestCaseBracket = Bracket("Best Case", bestCaseLines)
+    author = file.removesuffix(".txt")
+    author = author.replace("_", " ")
+    bracket = UserBracket(lines, resultBracket, author, roundBonuses, scoringSeeds)
     
-    score = 0
-    maxScore = 0
-    #get the current score of this bracket
-    for index, (resultRound, participantRound, roundBonus) in enumerate(zip(resultBracket.games, bracket.games, roundBonuses)):
-        for resultGame, participantGame in zip(resultRound, participantRound):
-            if(resultGame.winner != None):
-                #the result has a winner, we can calculate if the participant gets points or not
-                if(resultGame.winner.team == participantGame.winner.team):
-                    score += resultGame.winner.seed + roundBonus
-
-    #get the max score of this bracket
-    for index, (resultRound, participantRound, roundBonus) in enumerate(zip(bestCaseBracket.games, bracket.games, roundBonuses)):
-        for resultGame, participantGame in zip(resultRound, participantRound):
-            if(resultGame.winner != None):
-                #the result has a winner, we can calculate if the participant gets points or not
-                if(resultGame.winner.team == participantGame.winner.team):
-                    maxScore += resultGame.winner.seed + roundBonus
-
-    bracket.score = score
-    bracket.maxScore = maxScore
-
     predictionBrackets.append(bracket)
 
-    alive.append(" ".join(lines[0]))
+    alive.append(author)
+    winning_brackets[author] = 0
 
 predictionBrackets.sort(key=sort_key, reverse=True)
-determineNumberOfWinningScenarios(resultBracket)
+determineNumberOfWinningScenarios(resultBracket, predictionBrackets, winning_brackets)
+
+hypothetical_generated = 0
+for temp in winning_brackets:
+    hypothetical_generated += winning_brackets[temp]
+winning_percent_strings = {}
+    
+
 for i in range(len(predictionBrackets)):
     #determine the bracket which will be the best case scenario for this participant
-    participant = predictionBrackets[i].author
+    participant_bracket = predictionBrackets[i]
 
-    #create a new bracket
-    # if a game has already happened, use it in this bracket
-    # if a game has not finished yet:
-        # slot the team in if they are scheduled to be in this game if they keep winning
-        # leave the lot None if the team has been eliminated
-    lines = generateBestCaseScenarioLines(resultBracket, predictionBrackets[i])
-    bestCaseScenarioBracket = Bracket("Best Case", lines)
+    winning_percent_strings[participant_bracket.author] =format( 100 * winning_brackets[participant_bracket.author] / hypothetical_generated, ".2f")
+    if(winning_brackets[participant_bracket.author] == 0):
+        winning_percent_strings[participant_bracket.author] = "<0"
+    
+
 
     #determine the scores of everybody else if this was the final bracket
     topScore = 0
     topScorer = ""
 
     for j in range(len(predictionBrackets)):
-        score = 0
-        for index, (resultRound, participantRound, roundBonus) in enumerate(zip(bestCaseScenarioBracket.games, predictionBrackets[j].games, roundBonuses)):
-            for resultGame, participantGame in zip(resultRound, participantRound):
-                if(resultGame.winner != None):
-                    #the result has a winner, we can calculate if the participant gets points or not
-                    if(resultGame.winner.team == participantGame.winner.team):
-                        score += resultGame.winner.seed + roundBonus
-                else:
-                    #the result does not have a winner
-                    participantWinner = participantGame.winner
-                    if(not resultBracket.teams[participantWinner.team].lost):
-                        maxScore += participantGame.winner.seed + roundBonus
+        prediction_bracket = predictionBrackets[j]
 
-
-        if(score > predictionBrackets[i].maxScore):
-            #this person has been elimiated
-            predictionBrackets[i].eliminated = True
+        new_bracket = UserBracket(prediction_bracket.lines, participant_bracket.perfect_remaining_bracket, prediction_bracket.author, roundBonuses, scoringSeeds)
+        if(new_bracket.score > topScore):
+            topScore = new_bracket.score
+            topScorer = prediction_bracket.author
+        
+    if(topScorer != participant_bracket.author):
+        eliminated.add(prediction_bracket.author)
         
 print(f"{year} March Madness Results")
 print(f"----------------------------")
@@ -230,12 +152,13 @@ print()
 print("Still alive                        Score                  Max Score                   Winning Percentage")
 print("-----------------------------------------------------------------------------------------------------------")
 for prediction in predictionBrackets:
-    if(not prediction.eliminated):
+    if(not prediction.author in eliminated):
         author = prediction.author
         if len(author) < 20:
             for i in range(20-len(author)):
                 author += " "
-        print(f"{author}                  {prediction.score}                   {prediction.maxScore}                        {"{:.2f}".format(prediction.winningScenarios*100/(2**resultBracket.gamesRemaining))} %")
+        # print(f"{author}                  {prediction.score}                   {prediction.maxScore}                        {"{:.2f}".format(prediction.winningScenarios*100/(2**resultBracket.gamesRemaining))} %")
+        print(f"{author}                  {prediction.score}                   {prediction.max_score}                         {winning_percent_strings[prediction.author]}")
 
 
 print()
@@ -243,9 +166,10 @@ print()
 print("Eliminated                         Score                  Max Score                   Winning Percentage")
 print("------------------------------------------------------------------------------------------------------------")
 for prediction in predictionBrackets:
-    if(prediction.eliminated):
+    if(prediction.author in eliminated):
         author = prediction.author
         if(len(author) < 20):
             for i in range(20-len(author)):
                 author += " "
-        print(f"{author}                  {prediction.score}                   {prediction.maxScore}                        {"{:.2f}".format(prediction.winningScenarios*100/(2**resultBracket.gamesRemaining))} %")
+        # print(f"{author}                  {prediction.score}                   {prediction.maxScore}                        {"{:.2f}".format(prediction.winningScenarios*100/(2**resultBracket.gamesRemaining))} %")
+        print(f"{author}                  {prediction.score}                   {prediction.max_score}                         0 %")

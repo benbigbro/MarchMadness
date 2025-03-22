@@ -2,13 +2,13 @@
 16 Alabama St
 8 Louisville
 9 Creighton X
-5 Michigan
+5 Michigan X
 12 UC SanDiego
 4 Texas A&M X
 13 Yale
-6 Ole Miss
+6 Ole Miss X
 11 North Carolina
-3 Iowa St
+3 Iowa St X
 14 Lipscomb
 7 Marquette
 10 New Mexico
@@ -19,21 +19,21 @@
 8 UConn
 9 Oklahoma
 5 Memphis
-12 Colorado St
+12 Colorado St X
 4 Maryland
 13 Grand Canyon
 6 Missouri
 11 Drake X
-3 Texas Tech
+3 Texas Tech X
 14 UNC Wilmington
 7 Kansas
 10 Arkansas X
-2 St Johns
+2 St Johns X
 15 Omaha
-1 Duke
+1 Duke X
 16 American
 8 Mississippi St
-9 Baylor
+9 Baylor X
 5 Oregon
 12 Liberty
 4 Arizona
@@ -42,9 +42,9 @@
 11 VCU
 3 Wisconsin X
 14 Montana
-7 Saint Marys
+7 Saint Marys X
 10 Vanderbilt
-2 Alabama
+2 Alabama X
 15 Robert Morris
 1 Houston X
 16 SIUE

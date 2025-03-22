@@ -1,4 +1,5 @@
 import copy
+from random import Random
 from Game import Game
 from Team import Team
 
@@ -99,13 +100,46 @@ class Bracket:
 
     def __init__(self, lines:list[str]):
         lines = [line.replace("\n","") for line in lines]
+        self.lines = lines
         self.game_mapping = Bracket.get_game_mapping()
         if(not Bracket.valid_bracket(lines, False)):
             exit -1
 
         self.games = Bracket.build_bracket(lines)
-        
 
+        self.games_remaining = 63
+        for game in self.games:
+            if game.winner != None:
+                self.games_remaining -= 1
+
+class HypotheticalBracket(Bracket):
+    def __init__(self, seed:str, current_result:Bracket):
+        random = Random()
+        incomplete_games = []
+        for i,game in enumerate(current_result.games):
+            if(i == 63):
+                continue
+            if game.winner == None:
+                incomplete_games.append(i)
+        
+        self.games = copy.deepcopy(current_result.games)
+        self.game_mapping = Bracket.get_game_mapping()
+
+        seeds_consumed = 0
+        for i,index in enumerate(incomplete_games):
+            winning_index = random.randint(0,1)
+
+            if(index > 47):
+                winning_index = int(seed[seeds_consumed])
+                seeds_consumed += 1
+
+            self.games[index].winner = self.games[index].teams[winning_index]
+            self.games[self.game_mapping[index]].teams.append(self.games[index].winner)
+
+        self.games_remaining = 63
+        for game in self.games:
+            if game.winner != None:
+                self.games_remaining -= 1
 
 class UserBracket(Bracket):
     def __init__(self, lines:list[str], result:Bracket, author: str, round_points: list[int], seed_points:bool):
@@ -114,6 +148,7 @@ class UserBracket(Bracket):
         self.seed_points = seed_points
 
         lines = [line.replace("\n","") for line in lines]
+        self.lines = lines
         self.game_mapping = Bracket.get_game_mapping()
         if(not Bracket.valid_bracket(lines, True)):
             exit -1
@@ -124,8 +159,6 @@ class UserBracket(Bracket):
 
         self.score = self.get_score(result)
         self.max_score = self.get_max_score(self.perfect_remaining_bracket)
-        print(self.score)
-        print(self.max_score)
 
 
     def build_perfect_round(self, result:Bracket, number_of_games: int, add:int, eliminated_teams:set, perfect_remaining:Bracket):
@@ -134,7 +167,11 @@ class UserBracket(Bracket):
             actual_game = result.games[i+add]
             if(actual_game.winner != None and len(actual_game.teams) == 2):
                 #game has a winner and a loser
-                loser_index = 0 if actual_game.teams.index(actual_game.winner) == 1 else 1
+                loser_index = -1
+                if(actual_game.teams[0].team == actual_game.winner.team):
+                    loser_index = 1
+                if(actual_game.teams[1].team == actual_game.winner.team):
+                    loser_index = 0
                 loser = actual_game.teams[loser_index]
                 eliminated_teams.add(loser.team)
 
@@ -228,13 +265,13 @@ class UserBracket(Bracket):
 
         
 
-with open("2025/results.txt", "r") as file:
-    lines = file.readlines()
+# with open("2025/results.txt", "r") as file:
+#     lines = file.readlines()
 
-resultBracket = Bracket(lines)
+# resultBracket = Bracket(lines)
 
-with open("2025/groups/family/Anna_Singewald.txt", "r") as file:
-    lines = file.readlines()
+# with open("2025/groups/family/Anna_Singewald.txt", "r") as file:
+#     lines = file.readlines()
 
-bracket = UserBracket(lines, resultBracket, "Ben Moorlach", [1,5,10,15,20,25], True)
-print("done")
+# bracket = UserBracket(lines, resultBracket, "Ben Moorlach", [1,5,10,15,20,25], True)
+# print("done")
